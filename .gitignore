@@ -1,0 +1,14 @@
+/.direnv
+/.devstate
+
+/.bundle/
+/.yardoc
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
+/.rubocop_cache/
+result
+result-*

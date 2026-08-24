@@ -1,0 +1,18 @@
+#!@ruby@/bin/ruby
+# frozen_string_literal: true
+
+$LOAD_PATH.unshift "@lib@"
+
+require "devbox/error"
+require "devbox/net_helper"
+
+begin
+  Devbox::NetHelper.new(
+    ip_path: "@ip@",
+    nft_path: "@nft@",
+    dnsmasq_path: "@dnsmasq@"
+  ).run(ARGV)
+rescue Devbox::Error => e
+  warn "devbox-net: #{e.message}"
+  exit 1
+end
